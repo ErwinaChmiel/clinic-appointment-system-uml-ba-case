@@ -1,7 +1,7 @@
 # MediVisit — UML Business Analysis Case Study
 
-> **PL:** Profesjonalne studium przypadku z analizy biznesowej i UML dla systemu rezerwacji wizyt medycznych online.  
-> **EN:** Professional Business Analysis and UML case study for an online medical appointment booking system.
+> **PL:** Portfolio project dla roli Business Analyst / IT Business Analyst — system rezerwacji wizyt medycznych online.  
+> **EN:** Portfolio project for a Business Analyst / IT Business Analyst role — online medical appointment booking system.
 
 ![Business Analysis](https://img.shields.io/badge/Business%20Analysis-Requirements-blue)
 ![UML](https://img.shields.io/badge/UML-Use%20Case%20%7C%20Activity%20%7C%20Sequence%20%7C%20Class-green)
@@ -12,187 +12,111 @@
 
 ## 🇵🇱 Wersja polska
 
-### 1. Cel projektu
+### Cel projektu
 
-**MediVisit** to case study systemu umożliwiającego pacjentom rezerwację wizyt medycznych online, a placówce medycznej zarządzanie dostępnością specjalistów, potwierdzeniami wizyt i procesem płatności.
+**MediVisit** to przykładowy system umożliwiający pacjentom rezerwację wizyt medycznych online, a placówce medycznej zarządzanie dostępnością specjalistów, wizytami, płatnościami i powiadomieniami.
 
-Projekt pokazuje sposób pracy **Analityka Biznesowego / IT Business Analysta**: od kontekstu biznesowego i zakresu, przez wymagania oraz przypadki użycia, aż po spójny zestaw diagramów UML przygotowanych w formacie **draw.io / diagrams.net**.
+Projekt pokazuje sposób pracy analityka biznesowego / IT Business Analysta: identyfikację procesu, aktorów, przypadków użycia, przebiegów systemowych, modelu domenowego, stanów obiektu oraz logicznych komponentów rozwiązania.
 
-### 2. Problem biznesowy
+### Problem biznesowy
 
-Placówka medyczna obsługuje rezerwacje wizyt przez telefon, e-mail i recepcję. Powoduje to błędy w dostępności terminów, opóźnienia w potwierdzeniach, brak spójnej historii zmian oraz trudność w egzekwowaniu przedpłat dla wybranych usług.
+Placówka medyczna obsługuje znaczną część rezerwacji przez telefon, e-mail i recepcję. Powoduje to błędy w dostępności terminów, opóźnienia w potwierdzeniach, brak przejrzystej historii zmian oraz trudność w obsłudze przedpłat dla wybranych usług.
 
-Celem rozwiązania jest cyfryzacja procesu rezerwacji wizyt, ograniczenie pracy manualnej oraz zapewnienie pacjentom przejrzystego procesu wyboru terminu, płatności i potwierdzenia wizyty.
+Celem rozwiązania jest cyfryzacja procesu rezerwacji wizyt, ograniczenie pracy manualnej oraz zapewnienie pacjentowi czytelnego procesu wyboru terminu, płatności i potwierdzenia wizyty.
 
-### 3. Zakres analizy
+### Zakres analizy
 
-**W zakresie projektu:**
+**W zakresie:**
 
-- rezerwacja wizyty przez pacjenta,
-- wyszukiwanie specjalisty i dostępnego terminu,
-- tymczasowa blokada terminu podczas procesu rezerwacji,
-- obsługa przedpłaty dla wybranych usług,
-- potwierdzenie wizyty i wysłanie powiadomienia,
-- anulowanie wizyty,
-- podstawowy panel administracyjny dla personelu placówki.
+- wyszukiwanie lekarza i dostępnego terminu,
+- rezerwacja, zmiana i anulowanie wizyty,
+- tymczasowa blokada terminu,
+- obsługa płatności online dla wizyt wymagających przedpłaty,
+- wysyłka potwierdzeń i przypomnień,
+- podstawowe zarządzanie grafikiem lekarzy i użytkownikami.
 
 **Poza zakresem:**
 
-- pełna dokumentacja medyczna pacjenta,
-- e-recepty i integracja z systemami państwowymi,
-- zaawansowane rozliczenia księgowe,
-- aplikacja mobilna jako osobny kanał.
+- pełna elektroniczna dokumentacja medyczna,
+- e-recepty,
+- teleporady wideo,
+- pełna księgowość i fakturowanie,
+- integracje z publicznymi systemami ochrony zdrowia.
 
-### 4. Rola analityka
+### Diagramy UML — PL
 
-W projekcie przyjęto perspektywę analityka odpowiedzialnego za:
+Diagramy są przygotowane w dwóch formatach:
 
-- identyfikację interesariuszy,
-- zdefiniowanie problemu biznesowego,
-- opis zakresu MVP,
-- zebranie wymagań biznesowych, funkcjonalnych i niefunkcjonalnych,
-- przygotowanie przypadków użycia,
-- modelowanie procesów i struktury systemu w UML,
-- przygotowanie macierzy śladowania wymagań,
-- opis reguł biznesowych, ryzyk i założeń.
+- **PNG** — podgląd bezpośrednio na GitHubie,
+- **draw.io** — plik do otwarcia w diagrams.net / draw.io.
 
-### 5. Artefakty analityczne
-
-| Obszar | Artefakt | Link |
+| Diagram | Podgląd PNG | Plik draw.io |
 |---|---|---|
-| Kontekst biznesowy | Business context | [docs/pl/01_kontekst_biznesowy.md](docs/pl/01_kontekst_biznesowy.md) |
-| Zakres i interesariusze | Scope & stakeholders | [docs/pl/02_zakres_i_interesariusze.md](docs/pl/02_zakres_i_interesariusze.md) |
-| Wymagania | Business, functional, non-functional requirements | [docs/pl/03_wymagania.md](docs/pl/03_wymagania.md) |
-| Przypadki użycia | Use case specifications | [docs/pl/04_przypadki_uzycia.md](docs/pl/04_przypadki_uzycia.md) |
-| Reguły biznesowe | Business rules | [docs/pl/05_reguly_biznesowe.md](docs/pl/05_reguly_biznesowe.md) |
-| Śladowanie | Traceability matrix | [docs/pl/06_macierz_sladowania.md](docs/pl/06_macierz_sladowania.md) |
-| Ryzyka | Risks and assumptions | [docs/pl/07_ryzyka_i_zalozenia.md](docs/pl/07_ryzyka_i_zalozenia.md) |
-| Słownik | Glossary | [docs/pl/08_slownik.md](docs/pl/08_slownik.md) |
-| Backlog | User stories and acceptance criteria | [backlog/pl/user_stories.md](backlog/pl/user_stories.md) |
+| Diagram przypadków użycia | [PNG](diagrams/png/pl/01_diagram_przypadkow_uzycia.png) | [draw.io](diagrams/drawio/pl/01_diagram_przypadkow_uzycia.drawio) |
+| Diagram aktywności | [PNG](diagrams/png/pl/02_diagram_aktywnosci.png) | [draw.io](diagrams/drawio/pl/02_diagram_aktywnosci.drawio) |
+| Diagram sekwencji | [PNG](diagrams/png/pl/03_diagram_sekwencji.png) | [draw.io](diagrams/drawio/pl/03_diagram_sekwencji.drawio) |
+| Diagram klas | [PNG](diagrams/png/pl/04_diagram_klas.png) | [draw.io](diagrams/drawio/pl/04_diagram_klas.drawio) |
+| Diagram stanów | [PNG](diagrams/png/pl/05_diagram_stanow.png) | [draw.io](diagrams/drawio/pl/05_diagram_stanow.drawio) |
+| Diagram komponentów | [PNG](diagrams/png/pl/06_diagram_komponentow.png) | [draw.io](diagrams/drawio/pl/06_diagram_komponentow.drawio) |
 
-### 6. Diagramy UML — wersja polska
+#### Podgląd — diagram aktywności
 
-Diagramy są dostępne jako:
-
-- **SVG** — czytelny podgląd na GitHubie,
-- **draw.io** — wersja edytowalna w diagrams.net.
-
-| Diagram | Podgląd SVG | Plik draw.io |
-|---|---|---|
-| Diagram przypadków użycia | [SVG](diagrams/svg/pl/01_diagram_przypadkow_uzycia.svg) | [draw.io](diagrams/drawio/pl/01_diagram_przypadkow_uzycia.drawio) |
-| Diagram aktywności | [SVG](diagrams/svg/pl/02_diagram_aktywnosci.svg) | [draw.io](diagrams/drawio/pl/02_diagram_aktywnosci.drawio) |
-| Diagram sekwencji | [SVG](diagrams/svg/pl/03_diagram_sekwencji.svg) | [draw.io](diagrams/drawio/pl/03_diagram_sekwencji.drawio) |
-| Diagram klas | [SVG](diagrams/svg/pl/04_diagram_klas.svg) | [draw.io](diagrams/drawio/pl/04_diagram_klas.drawio) |
-| Diagram stanów | [SVG](diagrams/svg/pl/05_diagram_stanow.svg) | [draw.io](diagrams/drawio/pl/05_diagram_stanow.drawio) |
-| Diagram komponentów | [SVG](diagrams/svg/pl/06_diagram_komponentow.svg) | [draw.io](diagrams/drawio/pl/06_diagram_komponentow.drawio) |
-
-#### Podgląd: diagram aktywności
-
-![Diagram aktywności](diagrams/svg/pl/02_diagram_aktywnosci.svg)
-
-### 7. Kompetencje pokazane w projekcie
-
-- analiza biznesowa i systemowa,
-- modelowanie UML,
-- wymagania funkcjonalne i niefunkcjonalne,
-- specyfikacja przypadków użycia,
-- reguły biznesowe,
-- user stories i acceptance criteria,
-- traceability matrix,
-- komunikacja PL/EN w dokumentacji projektowej.
+![Diagram aktywności](diagrams/png/pl/02_diagram_aktywnosci.png)
 
 ---
 
 ## 🇬🇧 English version
 
-### 1. Project purpose
+### Project purpose
 
-**MediVisit** is a case study of an online medical appointment booking system that allows patients to book visits online and helps a healthcare provider manage specialist availability, appointment confirmations and payment handling.
+**MediVisit** is a sample online medical appointment booking system. It allows patients to book appointments online and supports a healthcare provider in managing doctor availability, appointments, payments and notifications.
 
-The project demonstrates the work of a **Business Analyst / IT Business Analyst**: from business context and scope definition, through requirements and use cases, to a consistent set of UML diagrams prepared in **draw.io / diagrams.net** format.
+The project demonstrates the work of a Business Analyst / IT Business Analyst: process identification, actors, use cases, system interactions, domain model, object lifecycle and logical solution components.
 
-### 2. Business problem
+### Business problem
 
-The medical provider handles appointment booking through phone calls, e-mail and reception desk operations. This creates availability errors, delayed confirmations, limited change history and difficulty enforcing prepayments for selected services.
+The healthcare provider handles a large part of appointment booking through phone calls, e-mail and reception desk operations. This causes availability errors, delayed confirmations, limited change history and difficulty handling prepayments for selected services.
 
-The target solution digitizes the appointment booking process, reduces manual work and gives patients a transparent flow for selecting a slot, completing payment and receiving confirmation.
+The target solution digitizes the appointment booking process, reduces manual work and provides the patient with a clear flow for selecting a slot, completing payment and receiving confirmation.
 
-### 3. Scope of analysis
+### Scope of analysis
 
 **In scope:**
 
-- appointment booking by a patient,
-- searching for a specialist and an available slot,
-- temporary slot reservation during booking,
-- prepayment handling for selected services,
-- appointment confirmation and notification sending,
-- appointment cancellation,
-- basic administration panel for clinic staff.
+- searching for a doctor and available appointment slot,
+- booking, changing and cancelling appointments,
+- temporary slot reservation,
+- online payment handling for appointments requiring prepayment,
+- confirmation and reminder notifications,
+- basic management of doctor schedules and users.
 
 **Out of scope:**
 
-- complete electronic medical records,
-- e-prescriptions and national healthcare integrations,
-- advanced accounting settlement,
-- separate mobile application channel.
+- full electronic medical records,
+- e-prescriptions,
+- video consultations,
+- full accounting and invoicing,
+- integrations with public healthcare systems.
 
-### 4. Analyst role
+### UML diagrams — EN
 
-The project is written from the perspective of an analyst responsible for:
+The diagrams are prepared in two formats:
 
-- stakeholder identification,
-- business problem definition,
-- MVP scope description,
-- business, functional and non-functional requirements,
-- use case specifications,
-- UML process and system modelling,
-- requirements traceability,
-- business rules, risks and assumptions.
+- **PNG** — direct GitHub preview,
+- **draw.io** — source file for diagrams.net / draw.io.
 
-### 5. Business analysis artefacts
-
-| Area | Artefact | Link |
+| Diagram | PNG preview | draw.io file |
 |---|---|---|
-| Business context | Business context | [docs/en/01_business_context.md](docs/en/01_business_context.md) |
-| Scope and stakeholders | Scope & stakeholders | [docs/en/02_scope_and_stakeholders.md](docs/en/02_scope_and_stakeholders.md) |
-| Requirements | Business, functional, non-functional requirements | [docs/en/03_requirements.md](docs/en/03_requirements.md) |
-| Use cases | Use case specifications | [docs/en/04_use_cases.md](docs/en/04_use_cases.md) |
-| Business rules | Business rules | [docs/en/05_business_rules.md](docs/en/05_business_rules.md) |
-| Traceability | Traceability matrix | [docs/en/06_traceability_matrix.md](docs/en/06_traceability_matrix.md) |
-| Risks | Risks and assumptions | [docs/en/07_risks_and_assumptions.md](docs/en/07_risks_and_assumptions.md) |
-| Glossary | Glossary | [docs/en/08_glossary.md](docs/en/08_glossary.md) |
-| Backlog | User stories and acceptance criteria | [backlog/en/user_stories.md](backlog/en/user_stories.md) |
+| Use case diagram | [PNG](diagrams/png/en/01_use_case_diagram.png) | [draw.io](diagrams/drawio/en/01_use_case_diagram.drawio) |
+| Activity diagram | [PNG](diagrams/png/en/02_activity_diagram.png) | [draw.io](diagrams/drawio/en/02_activity_diagram.drawio) |
+| Sequence diagram | [PNG](diagrams/png/en/03_sequence_diagram.png) | [draw.io](diagrams/drawio/en/03_sequence_diagram.drawio) |
+| Class diagram | [PNG](diagrams/png/en/04_class_diagram.png) | [draw.io](diagrams/drawio/en/04_class_diagram.drawio) |
+| State machine diagram | [PNG](diagrams/png/en/05_state_machine_diagram.png) | [draw.io](diagrams/drawio/en/05_state_machine_diagram.drawio) |
+| Component diagram | [PNG](diagrams/png/en/06_component_diagram.png) | [draw.io](diagrams/drawio/en/06_component_diagram.drawio) |
 
-### 6. UML diagrams — English version
+#### Preview — activity diagram
 
-The diagrams are available as:
-
-- **SVG** — readable GitHub preview,
-- **draw.io** — editable diagrams.net source files.
-
-| Diagram | SVG preview | draw.io file |
-|---|---|---|
-| Use case diagram | [SVG](diagrams/svg/en/01_use_case_diagram.svg) | [draw.io](diagrams/drawio/en/01_use_case_diagram.drawio) |
-| Activity diagram | [SVG](diagrams/svg/en/02_activity_diagram.svg) | [draw.io](diagrams/drawio/en/02_activity_diagram.drawio) |
-| Sequence diagram | [SVG](diagrams/svg/en/03_sequence_diagram.svg) | [draw.io](diagrams/drawio/en/03_sequence_diagram.drawio) |
-| Class diagram | [SVG](diagrams/svg/en/04_class_diagram.svg) | [draw.io](diagrams/drawio/en/04_class_diagram.drawio) |
-| State machine diagram | [SVG](diagrams/svg/en/05_state_machine_diagram.svg) | [draw.io](diagrams/drawio/en/05_state_machine_diagram.drawio) |
-| Component diagram | [SVG](diagrams/svg/en/06_component_diagram.svg) | [draw.io](diagrams/drawio/en/06_component_diagram.drawio) |
-
-#### Preview: activity diagram
-
-![Activity diagram](diagrams/svg/en/02_activity_diagram.svg)
-
-### 7. Skills demonstrated
-
-- business and systems analysis,
-- UML modelling,
-- functional and non-functional requirements,
-- use case specification,
-- business rules,
-- user stories and acceptance criteria,
-- traceability matrix,
-- bilingual PL/EN project documentation.
+![Activity diagram](diagrams/png/en/02_activity_diagram.png)
 
 ---
 
@@ -201,24 +125,24 @@ The diagrams are available as:
 ```text
 clinic-appointment-system-uml-ba-case/
 ├── README.md
-├── docs/
-│   ├── pl/
-│   └── en/
-├── diagrams/
-│   ├── svg/
-│   │   ├── pl/
-│   │   └── en/
-│   └── drawio/
-│       ├── pl/
-│       └── en/
-├── backlog/
-│   ├── pl/
-│   └── en/
-├── templates/
-│   ├── pl/
-│   └── en/
-├── LANGUAGE_COVERAGE_CHECKLIST.md
-├── GITHUB_WEB_UPDATE_STEPS.md
-├── LICENSE
-└── .gitignore
+└── diagrams/
+    ├── png/
+    │   ├── pl/
+    │   └── en/
+    └── drawio/
+        ├── pl/
+        └── en/
 ```
+
+## Skills demonstrated
+
+- Business Analysis,
+- IT Business Analysis,
+- UML modelling,
+- use case modelling,
+- process modelling,
+- sequence modelling,
+- domain modelling,
+- state modelling,
+- component modelling,
+- bilingual PL/EN documentation.

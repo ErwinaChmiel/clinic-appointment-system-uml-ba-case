@@ -1,25 +1,36 @@
-# Aktualizacja repozytorium przez GitHub web / Updating via GitHub web
+# GitHub web update steps
 
-## PL
+Use this package to clean the repository structure so the diagrams folder contains only PNG and draw.io files.
 
-1. Pobierz i rozpakuj paczkę ZIP.
-2. W obecnym repo usuń stare foldery: `docs`, `diagrams`, `backlog`, `templates`.
-3. Wgraj nowe foldery i pliki z rozpakowanej paczki.
-4. Upewnij się, że w repo są foldery `pl` i `en` dla dokumentacji, backlogu, szablonów i diagramów.
+## Recommended update
+
+1. Open the repository on GitHub:
+   `ErwinaChmiel/clinic-appointment-system-uml-ba-case`
+
+2. Delete the old `diagrams` folder from the repository.
+
+3. Upload the new `diagrams` folder from this package.
+
+4. Replace the root `README.md` with the `README.md` from this package.
+
 5. Commit message:
 
 ```text
-Replace project with complete bilingual PL/EN version
+Replace diagrams with bilingual PNG and drawio structure
 ```
 
-## EN
-
-1. Download and unzip the ZIP package.
-2. In the existing repository, delete old folders: `docs`, `diagrams`, `backlog`, `templates`.
-3. Upload the new folders and files from the unzipped package.
-4. Make sure the repository contains `pl` and `en` folders for documentation, backlog, templates and diagrams.
-5. Commit message:
+## Final structure
 
 ```text
-Replace project with complete bilingual PL/EN version
+README.md
+diagrams/
+├── README.md
+├── png/
+│   ├── pl/
+│   └── en/
+└── drawio/
+    ├── pl/
+    └── en/
 ```
+
+Do not upload old `svg`, `mermaid` or `plantuml` folders if you want the diagrams folder to contain only PNG and draw.io files.
