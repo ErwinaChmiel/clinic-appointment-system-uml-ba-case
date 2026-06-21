@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net" modified="2026-06-21T12:38:51.999379Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="Sequencediagramappoi" name="Sequence diagram — appointment booking">
+    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1450" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="2" value="Patient" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="65" y="110" width="230" height="56" as="geometry"/></mxCell>
+<mxCell id="3" value="" style="line;strokeWidth=1;dashed=1;html=1;strokeColor=#94A3B8;" vertex="1" parent="1"><mxGeometry x="180" y="170" width="1" height="600" as="geometry"/></mxCell>
+<mxCell id="4" value="Booking system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="405" y="110" width="230" height="56" as="geometry"/></mxCell>
+<mxCell id="5" value="" style="line;strokeWidth=1;dashed=1;html=1;strokeColor=#94A3B8;" vertex="1" parent="1"><mxGeometry x="520" y="170" width="1" height="600" as="geometry"/></mxCell>
+<mxCell id="6" value="Payment gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="765" y="110" width="230" height="56" as="geometry"/></mxCell>
+<mxCell id="7" value="" style="line;strokeWidth=1;dashed=1;html=1;strokeColor=#94A3B8;" vertex="1" parent="1"><mxGeometry x="880" y="170" width="1" height="600" as="geometry"/></mxCell>
+<mxCell id="8" value="Notification service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="1105" y="110" width="230" height="56" as="geometry"/></mxCell>
+<mxCell id="9" value="" style="line;strokeWidth=1;dashed=1;html=1;strokeColor=#94A3B8;" vertex="1" parent="1"><mxGeometry x="1220" y="170" width="1" height="600" as="geometry"/></mxCell>
+<mxCell id="10" value="Select slot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="2" target="4"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="11" value="Temporarily lock slot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="4" target="4"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="12" value="Authorize payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="4" target="6"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="13" value="Authorization result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="6" target="4"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="14" value="Confirm appointment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="4" target="4"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="15" value="Send confirmation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="4" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="16" value="Appointment confirmation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="8" target="2"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" modified="2026-06-21T12:38:52.000676Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="Statemachinediagrama" name="State machine diagram — appointment lifecycle">
+    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="2" value="" style="ellipse;fillColor=#020617;strokeColor=#020617;" vertex="1" parent="1"><mxGeometry x="84" y="164" width="32" height="32" as="geometry"/></mxCell>
+<mxCell id="3" value="New" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="125" y="115" width="210" height="70" as="geometry"/></mxCell>
+<mxCell id="4" value="Temporarily reserved" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="395" y="115" width="210" height="70" as="geometry"/></mxCell>
+<mxCell id="5" value="Awaiting payment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="675" y="115" width="210" height="70" as="geometry"/></mxCell>
+<mxCell id="6" value="Confirmed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="675" y="365" width="210" height="70" as="geometry"/></mxCell>
+<mxCell id="7" value="Cancelled" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="395" y="365" width="210" height="70" as="geometry"/></mxCell>
+<mxCell id="8" value="Expired" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="125" y="365" width="210" height="70" as="geometry"/></mxCell>
+<mxCell id="9" value="Completed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;spacing=10;" vertex="1" parent="1"><mxGeometry x="945" y="365" width="210" height="70" as="geometry"/></mxCell>
+<mxCell id="10" value="" style="ellipse;fillColor=#FFFFFF;strokeColor=#020617;strokeWidth=4;" vertex="1" parent="1"><mxGeometry x="1158" y="378" width="44" height="44" as="geometry"/></mxCell>
+<mxCell id="11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="2" target="3"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="12" value="slot selected" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="3" target="4"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="13" value="prepayment required" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="4" target="5"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="14" value="payment OK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="5" target="6"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="15" value="visit date passed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="6" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="9" target="10"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="17" value="cancellation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="18" value="payment timeout" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="5" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="19" value="cancellation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=13;strokeColor=#111827;fontColor=#0F172A;" edge="1" parent="1" source="4" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
