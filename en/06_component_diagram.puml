@@ -1,0 +1,30 @@
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+skinparam componentStyle uml2
+
+component "Patient Portal" as PatientPortal
+component "Reception Panel" as ReceptionPanel
+component "Booking Service" as BookingService
+component "Scheduling Service" as ScheduleService
+component "Payment Service" as PaymentService
+component "Notification Service" as NotificationService
+component "Appointments Database" as AppointmentDB
+component "Patients Database" as PatientDB
+component "External Payment Gateway" as ExternalPaymentGateway
+component "E-mail / SMS Service" as MessagingService
+
+PatientPortal ..> BookingService
+PatientPortal ..> PaymentService
+ReceptionPanel ..> BookingService
+ReceptionPanel ..> ScheduleService
+BookingService ..> ScheduleService
+BookingService ..> PaymentService
+BookingService ..> NotificationService
+BookingService ..> AppointmentDB
+BookingService ..> PatientDB
+ScheduleService ..> AppointmentDB
+PaymentService ..> ExternalPaymentGateway
+NotificationService ..> MessagingService
+NotificationService ..> PatientDB
+@enduml
