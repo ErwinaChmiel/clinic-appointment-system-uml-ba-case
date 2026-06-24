@@ -1,0 +1,175 @@
+<mxfile host="app.diagrams.net" agent="M365 Copilot">
+  <diagram id="00ff41afa1fb40c581cdeef56fc36c42" name="MediVisit Activity Diagram">
+    <mxGraphModel dx="5656" dy="2972" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;fontColor=#17365D;align=center;verticalAlign=middle;" value="MediVisit — Activity Diagram" vertex="1">
+          <mxGeometry height="30" width="1540" x="690" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#666666;align=center;verticalAlign=middle;" value="Appointment booking with online payment" vertex="1">
+          <mxGeometry height="22" width="1540" x="690" y="472" as="geometry" />
+        </mxCell>
+        <mxCell id="MUllpmW5-zqaT0lmMor5-10" parent="1" style="swimlane;html=1;startSize=20;fillColor=#e1d5e7;strokeColor=#B3B3B3;swimlaneFillColor=default;" value="&lt;span style=&quot;color: rgb(31, 31, 31); font-size: 15px;&quot;&gt;Payment Gateway&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1120" width="308" x="1614" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="e_initiate_authorize" edge="1" parent="MUllpmW5-zqaT0lmMor5-10" source="initiate_payment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="authorize_payment" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="initiate_payment" parent="MUllpmW5-zqaT0lmMor5-10" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;spacing=8;" value="Initiate payment" vertex="1">
+          <mxGeometry height="54" width="160" x="74" y="518" as="geometry" />
+        </mxCell>
+        <mxCell id="authorize_payment" parent="MUllpmW5-zqaT0lmMor5-10" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;spacing=8;" value="Authorize payment" vertex="1">
+          <mxGeometry height="54" width="160" x="74" y="642" as="geometry" />
+        </mxCell>
+        <mxCell id="payment_decision" parent="MUllpmW5-zqaT0lmMor5-10" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;spacing=8;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="Payment accepted?" vertex="1">
+          <mxGeometry height="90" width="120" x="94" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="e_authorize_decision" edge="1" parent="MUllpmW5-zqaT0lmMor5-10" source="authorize_payment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="payment_decision" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MUllpmW5-zqaT0lmMor5-11" parent="1" style="swimlane;html=1;startSize=20;fillColor=#bac8d3;strokeColor=#B3B3B3;swimlaneFillColor=default;" value="&lt;span style=&quot;color: rgb(31, 31, 31); font-size: 15px;&quot;&gt;Notification System&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1120" width="308" x="1922" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="send_confirmation" parent="MUllpmW5-zqaT0lmMor5-11" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#bac8d3;strokeColor=#23445d;fontSize=13;spacing=8;" value="Send appointment confirmation" vertex="1">
+          <mxGeometry height="66" width="170" x="53" y="943" as="geometry" />
+        </mxCell>
+        <mxCell id="MUllpmW5-zqaT0lmMor5-2" parent="1" style="swimlane;html=1;startSize=20;fillColor=#fad7ac;strokeColor=#B3B3B3;swimlaneFillColor=default;" value="&lt;span style=&quot;color: rgb(31, 31, 31); font-size: 15px;&quot;&gt;Patient&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1120" width="308" x="690" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="MUllpmW5-zqaT0lmMor5-2" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="28" x="139" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="search_doctor" parent="MUllpmW5-zqaT0lmMor5-2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;spacing=8;" value="Search for doctor" vertex="1">
+          <mxGeometry height="54" width="140" x="84" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="select_slot" parent="MUllpmW5-zqaT0lmMor5-2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;spacing=8;" value="Select available slot" vertex="1">
+          <mxGeometry height="60" width="140" x="84" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="e_start_search" edge="1" parent="MUllpmW5-zqaT0lmMor5-2" source="start" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="search_doctor" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_search_select" edge="1" parent="MUllpmW5-zqaT0lmMor5-2" source="search_doctor" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="select_slot" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="failure_end" parent="MUllpmW5-zqaT0lmMor5-2" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="139" y="704.5" as="geometry" />
+        </mxCell>
+        <mxCell id="MUllpmW5-zqaT0lmMor5-3" parent="1" style="swimlane;html=1;startSize=20;fillColor=#b0e3e6;strokeColor=#B3B3B3;swimlaneFillColor=default;" value="&lt;span style=&quot;color: rgb(31, 31, 31); font-size: 15px;&quot;&gt;Patient Portal&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1120" width="308" x="998" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="display_no_availability" parent="MUllpmW5-zqaT0lmMor5-3" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#b0e3e6;strokeColor=#0e8088;fontSize=13;spacing=8;" value="Display no availability" vertex="1">
+          <mxGeometry height="60" width="160" x="74" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="enter_details" parent="MUllpmW5-zqaT0lmMor5-3" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#b0e3e6;strokeColor=#0e8088;fontSize=13;spacing=8;" value="Enter patient details / log in" vertex="1">
+          <mxGeometry height="66" width="160" x="74" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="display_payment_error" parent="MUllpmW5-zqaT0lmMor5-3" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#b0e3e6;strokeColor=#0e8088;fontSize=13;spacing=8;" value="Display payment error" vertex="1">
+          <mxGeometry height="60" width="160" x="62" y="689.5" as="geometry" />
+        </mxCell>
+        <mxCell id="display_confirmation" parent="MUllpmW5-zqaT0lmMor5-3" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#b0e3e6;strokeColor=#0e8088;fontSize=13;spacing=8;" value="Display appointment confirmation" vertex="1">
+          <mxGeometry height="66" width="160" x="62" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="e_display_success_end" edge="1" parent="MUllpmW5-zqaT0lmMor5-3" source="display_confirmation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="success_end" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2" y="1063" />
+              <mxPoint x="2" y="1063" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="success_end" parent="MUllpmW5-zqaT0lmMor5-3" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="-169" y="1048" as="geometry" />
+        </mxCell>
+        <mxCell id="MUllpmW5-zqaT0lmMor5-4" parent="1" style="swimlane;html=1;startSize=20;fillColor=#fff2cc;strokeColor=#B3B3B3;swimlaneFillColor=default;" value="&lt;span style=&quot;color: rgb(31, 31, 31); font-size: 15px;&quot;&gt;Booking System&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1120" width="308" x="1306" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="check_availability" parent="MUllpmW5-zqaT0lmMor5-4" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;spacing=8;" value="Check slot availability" vertex="1">
+          <mxGeometry height="60" width="160" x="74" y="126.5" as="geometry" />
+        </mxCell>
+        <mxCell id="slot_available_decision" parent="MUllpmW5-zqaT0lmMor5-4" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;spacing=8;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="Slot available?" vertex="1">
+          <mxGeometry height="90" width="120" x="94" y="231.5" as="geometry" />
+        </mxCell>
+        <mxCell id="hold_slot" parent="MUllpmW5-zqaT0lmMor5-4" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;spacing=8;" value="Temporarily hold slot" vertex="1">
+          <mxGeometry height="60" width="170" x="69" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="prepayment_decision" parent="MUllpmW5-zqaT0lmMor5-4" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;spacing=8;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="Prepayment required?" vertex="1">
+          <mxGeometry height="90" width="120" x="94" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="create_appointment" parent="MUllpmW5-zqaT0lmMor5-4" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;spacing=8;" value="Create appointment" vertex="1">
+          <mxGeometry height="60" width="160" x="74" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="release_slot" parent="MUllpmW5-zqaT0lmMor5-4" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;spacing=8;" value="Release slot" vertex="1">
+          <mxGeometry height="60" width="160" x="74" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="e_check_decision" edge="1" parent="MUllpmW5-zqaT0lmMor5-4" source="check_availability" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="slot_available_decision" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_available_yes" edge="1" parent="MUllpmW5-zqaT0lmMor5-4" source="slot_available_decision" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="hold_slot" value="[yes]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_prepayment_no" edge="1" parent="MUllpmW5-zqaT0lmMor5-4" source="prepayment_decision" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;orthogonalLoop=1;jettySize=auto;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="create_appointment" value="[no]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="154" y="768" />
+              <mxPoint x="34" y="768" />
+              <mxPoint x="34" y="976" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_select_check" edge="1" parent="1" source="select_slot" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="check_availability" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1110" y="765" />
+              <mxPoint x="1110" y="677" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_no_availability_loop" edge="1" parent="1" source="display_no_availability" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="select_slot" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="844" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_available_no" edge="1" parent="1" source="slot_available_decision" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="display_no_availability" value="[no]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_hold_enter" edge="1" parent="1" source="hold_slot" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="enter_details" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_enter_prepayment" edge="1" parent="1" source="enter_details" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="prepayment_decision" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="1065" />
+              <mxPoint x="1460" y="1065" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_release_error" edge="1" parent="1" source="release_slot" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="display_payment_error" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_error_end" edge="1" parent="1" source="display_payment_error" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" target="failure_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MUllpmW5-zqaT0lmMor5-15" edge="1" parent="1" source="send_confirmation" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" target="display_confirmation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_prepayment_yes" edge="1" parent="1" source="prepayment_decision" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="initiate_payment" value="[yes]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1680" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_payment_no" edge="1" parent="1" source="payment_decision" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="release_slot" value="[no]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_payment_yes" edge="1" parent="1" source="payment_decision" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;orthogonalLoop=1;jettySize=auto;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" target="create_appointment" value="[yes]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_create_notify" edge="1" parent="1" source="create_appointment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.3;strokeColor=#1f1f1f;fontSize=12;fontColor=#1f1f1f;labelBackgroundColor=#ffffff;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="send_confirmation" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
