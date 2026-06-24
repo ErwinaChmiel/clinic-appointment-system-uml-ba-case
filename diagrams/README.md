@@ -15,7 +15,7 @@ diagrams/
     ├── pl/   # Diagramy w języku polskim do edycji w diagrams.net / draw.io
     └── en/   # Diagramy w języku angielskim do edycji w diagrams.net / draw.io
 
-## 🇵🇱 Wersja polska
+## 🇬🇧 English version
 
 # Diagrams
 
