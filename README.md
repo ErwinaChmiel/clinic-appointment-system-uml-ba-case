@@ -52,12 +52,12 @@ Diagramy są przygotowane w dwóch formatach:
 
 | Diagram | Podgląd PNG | Plik draw.io |
 |---|---|---|
-| Diagram przypadków użycia | [PNG](diagrams/png/pl/01_diagram_przypadkow_uzycia.png) | [draw.io](diagrams/drawio/pl/01_diagram_przypadkow_uzycia.drawio) |
-| Diagram aktywności | [PNG](diagrams/png/pl/02_diagram_aktywnosci.png) | [draw.io](diagrams/drawio/pl/02_diagram_aktywnosci.drawio) |
-| Diagram sekwencji | [PNG](diagrams/png/pl/03_diagram_sekwencji.png) | [draw.io](diagrams/drawio/pl/03_diagram_sekwencji.drawio) |
-| Diagram klas | [PNG](diagrams/png/pl/04_diagram_klas.png) | [draw.io](diagrams/drawio/pl/04_diagram_klas.drawio) |
-| Diagram stanów | [PNG](diagrams/png/pl/05_diagram_stanow.png) | [draw.io](diagrams/drawio/pl/05_diagram_stanow.drawio) |
-| Diagram komponentów | [PNG](diagrams/png/pl/06_diagram_komponentow.png) | [draw.io](diagrams/drawio/pl/06_diagram_komponentow.drawio) |
+| Diagram przypadków użycia | [PNG](diagrams/png/pl/01_diagram_przypadkow_uzycia.png) | [draw.io](diagrams/drawio/pl/01_diagram_przypadkow_uzycia.drawio.zip) |
+| Diagram aktywności | [PNG](diagrams/png/pl/02_diagram_aktywnosci.png) | [draw.io](diagrams/drawio/pl/02_diagram_aktywnosci.drawio.zip) |
+| Diagram sekwencji | [PNG](diagrams/png/pl/03_diagram_sekwencji.png) | [draw.io](diagrams/drawio/pl/03_diagram_sekwencji.drawio.zip) |
+| Diagram klas | [PNG](diagrams/png/pl/04_diagram_klas.png) | [draw.io](diagrams/drawio/pl/04_diagram_klas.drawio.zip) |
+| Diagram stanów | [PNG](diagrams/png/pl/05_diagram_stanow.png) | [draw.io](diagrams/drawio/pl/05_diagram_stanow.drawio.zip) |
+| Diagram komponentów | [PNG](diagrams/png/pl/06_diagram_komponentow.png) | [draw.io](diagrams/drawio/pl/06_diagram_komponentow.drawio.zip) |
 
 #### Podgląd — diagram aktywności
 
@@ -107,12 +107,12 @@ The diagrams are prepared in two formats:
 
 | Diagram | PNG preview | draw.io file |
 |---|---|---|
-| Use case diagram | [PNG](diagrams/png/en/01_use_case_diagram.png) | [draw.io](diagrams/drawio/en/01_use_case_diagram.drawio) |
-| Activity diagram | [PNG](diagrams/png/en/02_activity_diagram.png) | [draw.io](diagrams/drawio/en/02_activity_diagram.drawio) |
-| Sequence diagram | [PNG](diagrams/png/en/03_sequence_diagram.png) | [draw.io](diagrams/drawio/en/03_sequence_diagram.drawio) |
-| Class diagram | [PNG](diagrams/png/en/04_class_diagram.png) | [draw.io](diagrams/drawio/en/04_class_diagram.drawio) |
-| State machine diagram | [PNG](diagrams/png/en/05_state_machine_diagram.png) | [draw.io](diagrams/drawio/en/05_state_machine_diagram.drawio) |
-| Component diagram | [PNG](diagrams/png/en/06_component_diagram.png) | [draw.io](diagrams/drawio/en/06_component_diagram.drawio) |
+| Use case diagram | [PNG](diagrams/png/en/01_use_case_diagram.png) | [draw.io](diagrams/drawio/en/01_use_case_diagram.drawio.zip) |
+| Activity diagram | [PNG](diagrams/png/en/02_activity_diagram.png) | [draw.io](diagrams/drawio/en/02_activity_diagram.drawio.zip) |
+| Sequence diagram | [PNG](diagrams/png/en/03_sequence_diagram.png) | [draw.io](diagrams/drawio/en/03_sequence_diagram.drawio.zip) |
+| Class diagram | [PNG](diagrams/png/en/04_class_diagram.png) | [draw.io](diagrams/drawio/en/04_class_diagram.drawio.zip) |
+| State machine diagram | [PNG](diagrams/png/en/05_state_machine_diagram.png) | [draw.io](diagrams/drawio/en/05_state_machine_diagram.drawio.zip) |
+| Component diagram | [PNG](diagrams/png/en/06_component_diagram.png) | [draw.io](diagrams/drawio/en/06_component_diagram.drawio.zip) |
 
 #### Preview — activity diagram
 
