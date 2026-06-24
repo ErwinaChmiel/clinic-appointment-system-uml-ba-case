@@ -14,6 +14,14 @@ diagrams/
 └── drawio/
     ├── pl/   # Diagramy w języku polskim do edycji w diagrams.net / draw.io
     └── en/   # Diagramy w języku angielskim do edycji w diagrams.net / draw.io
+```
+
+## Formaty
+
+- Pliki `png` służą jako podglądy diagramów przyjazne dla GitHuba.
+- Pliki `drawio` można otwierać i edytować w diagrams.net / draw.io.
+
+---
 
 ## 🇬🇧 English version
 
@@ -36,4 +44,5 @@ diagrams/
 ## Formats
 
 - `png` files are used as GitHub-friendly previews.
-- `drawio` files can be opened in diagrams.net / draw.io.
+- `drawio` files can be opened and edited in diagrams.net / draw.io.
+
