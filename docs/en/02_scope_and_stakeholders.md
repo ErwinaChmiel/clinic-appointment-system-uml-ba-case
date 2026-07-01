@@ -1,31 +1,34 @@
-# Scope and stakeholders
+# 01. Scope and Stakeholders
 
-## MVP scope
+## MVP Scope
 
-The MVP includes:
+The MVP version includes:
 
-1. specialist search,
-2. available slot selection,
-3. temporary slot reservation,
-4. prepayment handling when required,
-5. appointment confirmation,
-6. confirmation message sending,
-7. appointment cancellation by patient or staff,
-8. basic schedule management.
+- searching for a specialist,
+- selecting an available appointment slot,
+- temporarily reserving an appointment slot,
+- handling mandatory online prepayment,
+- confirming the appointment after successful payment,
+- sending an appointment confirmation by e-mail or SMS,
+- cancelling an appointment by the patient or staff,
+- basic management of doctors’ schedules,
+- basic management of system users.
 
-## Stakeholders
+## 02. Stakeholders
 
 | Stakeholder | Business need |
 |---|---|
 | Patient | Fast and clear online appointment booking. |
 | Doctor / specialist | Up-to-date schedule and fewer manual changes. |
-| Reception staff | Fewer phone calls and less manual slot management. |
-| Clinic administrator | Control over services, specialists, schedules and payment rules. |
-| Payment provider | Secure payment authorization. |
+| Reception staff | Fewer phone calls and less manual appointment management. |
+| Facility administrator | Control over users, specialists, schedules and payment rules. |
+| Payment provider | Secure online payment authorization. |
+| Notification system | Delivery of confirmations and messages to patients. |
 
-## Out of scope
+## Out of Scope
 
-- electronic medical records,
-- e-prescriptions,
-- public healthcare system integrations,
-- full accounting settlement.
+- medical documentation,
+- electronic prescriptions,
+- video consultations,
+- integrations with public healthcare systems,
+- full accounting and invoicing.
