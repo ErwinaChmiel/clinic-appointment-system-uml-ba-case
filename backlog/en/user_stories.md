@@ -4,7 +4,7 @@
 
 | ID | User story | Priority |
 |---|---|---|
-| US-01 | As a patient, I want to search for a specialist so that I can find the right service. | Must |
+| US-01 | As a patient, I want to search for a doctor so that I can find the right service. | Must |
 | US-02 | As a patient, I want to view available slots so that I can choose a convenient appointment time. | Must |
 | US-03 | As a patient, I want to pay the required prepayment so that I can confirm the appointment. | Must |
 | US-04 | As a patient, I want to receive a confirmation so that I know the appointment has been booked. | Must |
