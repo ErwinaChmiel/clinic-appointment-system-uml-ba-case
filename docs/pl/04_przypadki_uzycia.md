@@ -1,5 +1,3 @@
-# Przypadki użycia
-
 ## UC-01 — Zarezerwuj wizytę
 
 | Pole | Opis |
@@ -7,7 +5,7 @@
 | Aktor główny | Pacjent |
 | Cel | Zarezerwowanie wizyty u wybranego specjalisty. |
 | Warunki wstępne | Pacjent ma dostęp do systemu rezerwacji. |
-| Warunki końcowe | Wizyta ma status `Potwierdzona` albo termin zostaje zwolniony. |
+| Warunki końcowe | Wizyta ma status Potwierdzona albo termin zostaje zwolniony. |
 
 ### Główny scenariusz
 
@@ -15,17 +13,16 @@
 2. System prezentuje dostępne terminy.
 3. Pacjent wybiera termin.
 4. System tymczasowo rezerwuje termin.
-5. System sprawdza, czy wymagana jest przedpłata.
-6. Jeśli przedpłata nie jest wymagana, system potwierdza wizytę.
-7. Jeśli przedpłata jest wymagana, system przekierowuje do płatności.
-8. Po pozytywnej autoryzacji system potwierdza wizytę.
-9. System wysyła wiadomość z potwierdzeniem.
+5. System przekierowuje pacjenta do płatności online.
+6. Pacjent dokonuje płatności.
+7. Po pozytywnej autoryzacji płatności system potwierdza wizytę.
+8. System wysyła wiadomość z potwierdzeniem.
 
 ### Scenariusze alternatywne
 
-- A1: płatność nie powiodła się — system zwalnia termin i pokazuje błąd.
-- A2: termin został zajęty — system prosi o wybór innego terminu.
-- A3: pacjent przerywa proces — system zwalnia tymczasowo zablokowany termin.
+- A1: Płatność nie powiodła się — system zwalnia termin i pokazuje błąd płatności.
+- A2: Termin został zajęty — system prosi o wybór innego terminu.
+- A3: Pacjent przerywa proces — system zwalnia tymczasowo zablokowany termin po upływie czasu rezerwacji.
 
 ## UC-02 — Anuluj wizytę
 
