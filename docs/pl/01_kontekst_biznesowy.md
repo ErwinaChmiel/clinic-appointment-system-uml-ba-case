@@ -25,5 +25,5 @@ Celem jest uruchomienie rozwiązania online, które pozwoli pacjentowi samodziel
 | Redukcja pracy manualnej | Mniej telefonów i ręcznego potwierdzania terminów. |
 | Lepsza dostępność informacji | Pacjent widzi aktualne terminy online. |
 | Mniej błędów | System blokuje termin podczas rezerwacji. |
-| Większa kontrola płatności | Wybrane usługi wymagają przedpłaty przed potwierdzeniem wizyty. |
+| Większa kontrola płatności |  Każda rezerwacja wymaga przedpłaty online przed potwierdzeniem wizyty. |
 
