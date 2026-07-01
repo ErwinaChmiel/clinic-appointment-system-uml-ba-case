@@ -1,4 +1,4 @@
-# Wymagania
+# 03. Wymagania
 
 ## Wymagania biznesowe
 
@@ -33,3 +33,4 @@
 | NFR-02 | System powinien być dostępny co najmniej 99,5% czasu miesięcznie. |
 | NFR-03 | Dane pacjenta powinny być chronione zgodnie z wymaganiami prywatności i bezpieczeństwa. |
 | NFR-04 | Interfejs powinien być responsywny i dostępny na urządzeniach mobilnych. |
+
