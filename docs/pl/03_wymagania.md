@@ -6,7 +6,7 @@
 |---|---|
 | BRQ-01 | System powinien umożliwiać pacjentowi samodzielną rezerwację wizyty online. |
 | BRQ-02 | System powinien ograniczyć liczbę ręcznych potwierdzeń wykonywanych przez recepcję. |
-| BRQ-03 | System powinien wspierać przedpłaty dla wybranych usług. |
+| BRQ-03 | System powinien wymagać przedpłaty online przed potwierdzeniem wizyty. |
 | BRQ-04 | System powinien zapewniać jednoznaczny status każdej wizyty. |
 
 ## Wymagania funkcjonalne
