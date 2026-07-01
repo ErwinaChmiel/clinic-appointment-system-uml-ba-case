@@ -22,6 +22,7 @@ Wersja MVP obejmuje:
 | Recepcja | Mniej połączeń i mniej ręcznego zarządzania terminami. |
 | Administrator placówki | Kontrola usług, specjalistów, harmonogramów i reguł płatności. |
 | Dostawca płatności | Bezpieczna autoryzacja płatności. |
+| System powiadomień | Dostarczenie potwierdzeń i komunikatów do pacjentów. |
 
 ## Poza zakresem
 
