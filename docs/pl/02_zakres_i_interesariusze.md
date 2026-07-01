@@ -8,7 +8,7 @@ Wersja MVP obejmuje:
 - wybór dostępnego terminu,
 - tymczasową rezerwację terminu,
 - obsługę obowiązkowej przedpłaty online,
-- potwierdzenie wizyty,
+- potwierdzenie wizyty po udanej płatności,
 - wysłanie wiadomości potwierdzającej e-mail lub SMS,
 - anulowanie wizyty przez pacjenta lub personel,
 - podstawowe zarządzanie harmonogramem.
