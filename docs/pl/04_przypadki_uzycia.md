@@ -30,4 +30,4 @@ Pacjent lub personel anuluje wizytę zgodnie z regułami anulowania. System aktu
 
 ## UC-03 — Zarządzaj harmonogramem
 
-Administrator lub recepcja aktualizuje dostępność specjalistów i blokady terminów.
+Administrator lub recepcja aktualizuje dostępność lekarzy i blokady terminów.
