@@ -16,9 +16,9 @@
 | FR-01 | Pacjent może wyszukać specjalistę według specjalizacji. |
 | FR-02 | Pacjent może zobaczyć dostępne terminy specjalisty. |
 | FR-03 | System tymczasowo blokuje wybrany termin podczas rezerwacji. |
-| FR-04 | System sprawdza, czy dana usługa wymaga przedpłaty. |
-| FR-05 | System przekazuje płatność do bramki płatności. |
-| FR-06 | System potwierdza wizytę po spełnieniu warunków rezerwacji. |
+| FR-04 | System tworzy tymczasową rezerwację terminu przed rozpoczęciem płatności. |
+| FR-05 | System przekierowuje pacjenta do bramki płatności w celu opłacenia przedpłaty online. |
+| FR-06 | System potwierdza wizytę po pozytywnej autoryzacji płatności. |
 | FR-07 | System wysyła wiadomość z potwierdzeniem wizyty. |
 | FR-08 | Pacjent może anulować wizytę zgodnie z regułami biznesowymi. |
 | FR-09 | Pacjent może zmienić termin wizyty zgodnie z dostępnością terminów. |
