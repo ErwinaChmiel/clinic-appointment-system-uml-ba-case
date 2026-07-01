@@ -23,6 +23,7 @@
 | FR-08 | Pacjent może anulować wizytę zgodnie z regułami biznesowymi. |
 | FR-09 | Pacjent może zmienić termin wizyty zgodnie z dostępnością terminów. |
 | FR-10 | Administrator może zarządzać użytkownikami systemu. |
+| FR-11 | Pracownik recepcji lub administrator może zarządzać harmonogramem lekarzy. |
 
 ## Wymagania niefunkcjonalne
 
