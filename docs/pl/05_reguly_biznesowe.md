@@ -8,4 +8,4 @@
 | BR.04 | Pacjent może anulować wizytę najpóźniej 24 godziny przed terminem, jeśli usługa nie ma innych zasad. |
 | BR.05 | System musi wysłać potwierdzenie po każdej skutecznej rezerwacji. |
 | BR.06 | Nieudana płatność powoduje zwolnienie tymczasowo zarezerwowanego terminu. |
-| BR.07 | Każda wizyta musi posiadać jednoznaczny status, np. Oczekuje na płatność, Potwierdzona, Anulowana, Płatność nieudana, W trakcie lub Zakończona. |
+| BR.07 | ażda rezerwacja wymaga przedpłaty online przed potwierdzeniem wizyty. |
