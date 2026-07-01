@@ -21,6 +21,7 @@
 | FR-06 | System potwierdza wizytę po spełnieniu warunków rezerwacji. |
 | FR-07 | System wysyła wiadomość z potwierdzeniem wizyty. |
 | FR-08 | Pacjent może anulować wizytę zgodnie z regułami biznesowymi. |
+| FR-09 | Pacjent może zmienić termin wizyty zgodnie z dostępnością terminów. |
 
 ## Wymagania niefunkcjonalne
 
