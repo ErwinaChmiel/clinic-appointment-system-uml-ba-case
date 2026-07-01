@@ -16,22 +16,22 @@
 ## Acceptance criteria — US-03
 
 ```gherkin
-Scenario: Przekierowanie do płatności dla wizyty wymagającej przedpłaty
-Given wybrana usługa wymaga przedpłaty
+Scenario: Przekierowanie do płatności po wyborze terminu
+Given pacjent wybrał dostępny termin wizyty
 When pacjent potwierdzi wybór terminu
 Then system tworzy tymczasową rezerwację terminu
+And wizyta otrzymuje status "Oczekuje na płatność"
 And system przekierowuje pacjenta do płatności online
 
-Scenario: Udana płatność
+cenario: Udana płatność
 Given pacjent został przekierowany do płatności online
 When płatność zakończy się sukcesem
 Then system zmienia status wizyty na "Potwierdzona"
 And system wysyła potwierdzenie wizyty do pacjenta
+
 
 Scenario: Nieudana płatność
 Given pacjent został przekierowany do płatności online
 When płatność zostanie odrzucona
 Then system zwalnia tymczasowo zablokowany termin
 And system wyświetla pacjentowi informację o błędzie płatności
-
-
