@@ -20,13 +20,13 @@ Scenario: Przekierowanie do płatności po wyborze terminu
 Given pacjent wybrał dostępny termin wizyty
 When pacjent potwierdzi wybór terminu
 Then system tworzy tymczasową rezerwację terminu
-And wizyta otrzymuje status "Oczekuje na płatność"
+And wizyta otrzymuje status "Oczekuje na płatność" / "PENDING_PAYMENT"
 And system przekierowuje pacjenta do płatności online
 
 Scenario: Udana płatność
 Given pacjent został przekierowany do płatności online
 When płatność zakończy się sukcesem
-Then system zmienia status wizyty na "Potwierdzona"
+Then system zmienia status wizyty na "Potwierdzona" / "CONFIRMED"
 And system wysyła potwierdzenie wizyty do pacjenta
 
 Scenario: Nieudana płatność
