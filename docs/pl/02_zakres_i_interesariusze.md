@@ -7,7 +7,7 @@ Wersja MVP obejmuje:
 - wyszukiwanie specjalisty,
 - wybór dostępnego terminu,
 - tymczasową rezerwację terminu,
-- obsługę przedpłaty, jeśli jest wymagana,
+- obsługę obowiązkowej przedpłaty online,
 - potwierdzenie wizyty,
 - wysłanie wiadomości potwierdzającej e-mail lub SMS,
 - anulowanie wizyty przez pacjenta lub personel,
