@@ -1,17 +1,17 @@
-# Zakres i interesariusze
+# 02. Zakres i interesariusze
 
 ## Zakres MVP
 
 Wersja MVP obejmuje:
 
-1. wyszukiwanie specjalisty,
-2. wybór dostępnego terminu,
-3. tymczasową rezerwację terminu,
-4. obsługę przedpłaty, jeśli jest wymagana,
-5. potwierdzenie wizyty,
-6. wysłanie wiadomości potwierdzającej e-mail lub SMS,
-7. anulowanie wizyty przez pacjenta lub personel,
-8. podstawowe zarządzanie harmonogramem.
+- wyszukiwanie specjalisty,
+- wybór dostępnego terminu,
+- tymczasową rezerwację terminu,
+- obsługę przedpłaty, jeśli jest wymagana,
+- potwierdzenie wizyty,
+- wysłanie wiadomości potwierdzającej e-mail lub SMS,
+- anulowanie wizyty przez pacjenta lub personel,
+- podstawowe zarządzanie harmonogramem.
 
 ## Interesariusze
 
