@@ -1,4 +1,4 @@
-# 03. Wymagania
+# Wymagania
 
 ## Wymagania biznesowe
 
