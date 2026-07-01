@@ -16,7 +16,7 @@ Najważniejsze problemy operacyjne:
 
 ## Cel biznesowy
 
-Celem jest uruchomienie rozwiązania online, które pozwoli pacjentowi samodzielnie wybrać specjalistę, termin oraz otrzymać potwierdzenie wizyty bez udziału recepcji.
+Celem jest uruchomienie rozwiązania online, które pozwoli pacjentowi samodzielnie wybrać specjalistę, termin, zrealizować wymaganą przedpłatę oraz otrzymać potwierdzenie wizyty bez udziału recepcji.
 
 ## Oczekiwane korzyści
 
