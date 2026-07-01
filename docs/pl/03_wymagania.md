@@ -22,6 +22,7 @@
 | FR-07 | System wysyła wiadomość z potwierdzeniem wizyty. |
 | FR-08 | Pacjent może anulować wizytę zgodnie z regułami biznesowymi. |
 | FR-09 | Pacjent może zmienić termin wizyty zgodnie z dostępnością terminów. |
+| FR-10 | Administrator może zarządzać użytkownikami systemu. |
 
 ## Wymagania niefunkcjonalne
 
