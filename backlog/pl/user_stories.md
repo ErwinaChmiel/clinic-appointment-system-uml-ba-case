@@ -4,7 +4,7 @@
 
 | ID | User story | Priorytet |
 |---|---|---|
-| US-01 | Jako pacjent chcę wyszukać specjalistę, aby znaleźć właściwą usługę. | Must |
+| US-01 | Jako pacjent chcę wyszukać lekarza, aby znaleźć właściwą usługę. | Must |
 | US-02 | Jako pacjent chcę zobaczyć dostępne terminy, aby wybrać dogodny czas wizyty. | Must |
 | US-03 | Jako pacjent chcę opłacić wymaganą przedpłatę, aby potwierdzić wizytę. | Must |
 | US-04 | Jako pacjent chcę otrzymać potwierdzenie, aby mieć pewność, że wizyta została zarezerwowana. | Must |
