@@ -14,15 +14,15 @@
 
 ### Cel projektu
 
-**MediVisit** to przykładowy system umożliwiający pacjentom rezerwację wizyt medycznych online, a placówce medycznej zarządzanie dostępnością specjalistów, wizytami, płatnościami i powiadomieniami.
+**MediVisit** to przykładowy system umożliwiający pacjentom rezerwację wizyt medycznych online, a placówce medycznej zarządzanie dostępnością specjalistów, wizytami, obowiązkowymi płatnościami online i powiadomieniami.
 
 Projekt pokazuje sposób pracy analityka biznesowego / IT Business Analysta: identyfikację procesu, aktorów, przypadków użycia, przebiegów systemowych, modelu domenowego, stanów obiektu oraz logicznych komponentów rozwiązania.
 
 ### Problem biznesowy
 
-Placówka medyczna obsługuje znaczną część rezerwacji przez telefon, e-mail i recepcję. Powoduje to błędy w dostępności terminów, opóźnienia w potwierdzeniach, brak przejrzystej historii zmian oraz trudność w obsłudze przedpłat dla wybranych usług.
+Placówka medyczna obsługuje znaczną część rezerwacji przez telefon, e-mail i recepcję. Powoduje to błędy w dostępności terminów, opóźnienia w potwierdzeniach, brak przejrzystej historii zmian oraz trudność w automatycznej obsłudze przedpłat online.
 
-Celem rozwiązania jest cyfryzacja procesu rezerwacji wizyt, ograniczenie pracy manualnej oraz zapewnienie pacjentowi czytelnego procesu wyboru terminu, płatności i potwierdzenia wizyty.
+Celem rozwiązania jest cyfryzacja procesu rezerwacji wizyt, ograniczenie pracy manualnej oraz zapewnienie pacjentowi czytelnego procesu wyboru terminu, dokonania płatności online i otrzymania potwierdzenia wizyty.
 
 ### Zakres analizy
 
@@ -31,7 +31,7 @@ Celem rozwiązania jest cyfryzacja procesu rezerwacji wizyt, ograniczenie pracy 
 - wyszukiwanie lekarza i dostępnego terminu,
 - rezerwacja, zmiana i anulowanie wizyty,
 - tymczasowa blokada terminu,
-- obsługa płatności online dla wizyt wymagających przedpłaty,
+- obsługa obowiązkowej płatności online przed potwierdzeniem wizyty,
 - wysyłka potwierdzeń i przypomnień,
 - podstawowe zarządzanie grafikiem lekarzy i użytkownikami.
 
@@ -45,10 +45,10 @@ Celem rozwiązania jest cyfryzacja procesu rezerwacji wizyt, ograniczenie pracy 
 
 ### Kluczowe reguły biznesowe
 
-- Wizyta może zostać potwierdzona dopiero po udanej płatności, jeśli wymagana jest przedpłata.
+- Każda rezerwacja wymaga przedpłaty online przed potwierdzeniem wizyty.
+- Wizyta może zostać potwierdzona dopiero po pozytywnej autoryzacji płatności.
 - Jeśli płatność zostanie odrzucona lub przekroczony zostanie czas płatności, tymczasowo zablokowany termin zostaje zwolniony.
-- Jeśli przedpłata nie jest wymagana, wizyta może zostać potwierdzona bezpośrednio po rezerwacji.
-- Pacjent otrzymuje potwierdzenie wizyty po udanej rezerwacji.
+- Pacjent otrzymuje potwierdzenie wizyty po udanej rezerwacji i płatności.
 - Anulowanie wizyty może wywołać wysłanie powiadomienia o anulowaniu.
 - Lekarz może mieć wiele dostępnych terminów.
 - Jeden termin dostępności może być zarezerwowany maksymalnie przez jedną wizytę.
@@ -56,7 +56,7 @@ Celem rozwiązania jest cyfryzacja procesu rezerwacji wizyt, ograniczenie pracy 
 ### Założenia
 
 - System obsługuje zarówno pacjentów, jak i personel recepcji.
-- Płatność online jest opcjonalna i zależy od tego, czy dla danej wizyty wymagana jest przedpłata.
+- Płatność online jest obowiązkowym krokiem procesu rezerwacji wizyty.
 - Obsługa płatności odbywa się przez zewnętrzną bramkę płatności.
 - Powiadomienia są dostarczane przez zewnętrzny serwis e-mail/SMS.
 - Terminy wizyt są tymczasowo blokowane na czas procesu płatności.
@@ -66,9 +66,9 @@ Celem rozwiązania jest cyfryzacja procesu rezerwacji wizyt, ograniczenie pracy 
 
 ## Uzasadnienie doboru diagramów UML w projekcie MediVisit
 
-Na początku projektu MediVisit punktem wyjścia była potrzeba opisania procesu rezerwacji wizyty medycznej z opcjonalną płatnością online. Zakres systemu nie ograniczał się wyłącznie do samego wyboru terminu, ale obejmował również wyszukiwanie lekarza, sprawdzanie dostępności terminów, utworzenie rezerwacji, obsługę płatności, potwierdzenie wizyty, wysyłkę powiadomień oraz obsługę sytuacji wyjątkowych, takich jak odrzucona płatność, anulowanie wizyty lub brak dostępnych terminów.
+Na początku projektu MediVisit punktem wyjścia była potrzeba opisania procesu rezerwacji wizyty medycznej z obowiązkową płatnością online. Zakres systemu nie ograniczał się wyłącznie do samego wyboru terminu, ale obejmował również wyszukiwanie lekarza, sprawdzanie dostępności terminów, utworzenie rezerwacji, obsługę płatności, potwierdzenie wizyty, wysyłkę powiadomień oraz obsługę sytuacji wyjątkowych, takich jak odrzucona płatność, anulowanie wizyty lub brak dostępnych terminów.
 
-Na początku zostały zidentyfikowane główne potrzeby użytkowników systemu. Pacjent powinien mieć możliwość wyszukania lekarza, sprawdzenia dostępnych terminów oraz zarezerwowania wizyty. W niektórych przypadkach pacjent może być zobowiązany do dokonania przedpłaty online. System powinien potwierdzić wizytę po udanej płatności, zwolnić termin w przypadku niepowodzenia płatności oraz wysłać pacjentowi powiadomienie e-mail lub SMS. Dodatkowo administrator i personel medyczny powinni mieć możliwość zarządzania użytkownikami oraz grafikami lekarzy.
+Na początku zostały zidentyfikowane główne potrzeby użytkowników systemu. Pacjent powinien mieć możliwość wyszukania lekarza, sprawdzenia dostępnych terminów, zarezerwowania wizyty oraz dokonania przedpłaty online. System powinien potwierdzić wizytę po udanej płatności, zwolnić termin w przypadku niepowodzenia płatności oraz wysłać pacjentowi powiadomienie e-mail lub SMS. Dodatkowo administrator i personel medyczny powinni mieć możliwość zarządzania użytkownikami oraz grafikami lekarzy.
 
 Na tej podstawie uznano, że pojedynczy diagram nie wystarczy do pełnego opisania systemu. Każdy diagram UML przedstawia system z innej perspektywy, dlatego dobrano zestaw diagramów pozwalający opisać wymagania funkcjonalne, przebieg procesu, komunikację między uczestnikami, strukturę danych, cykl życia wizyty oraz logiczną architekturę rozwiązania.
 
@@ -76,17 +76,17 @@ Na tej podstawie uznano, że pojedynczy diagram nie wystarczy do pełnego opisan
 
 Analiza została przeprowadzona etapowo. Najpierw skupiono się na zrozumieniu, kto korzysta z systemu i jakie cele chce osiągnąć. Następnie przeanalizowano główny proces biznesowy, czyli rezerwację wizyty. Kolejnym krokiem było doprecyzowanie scenariuszy alternatywnych, szczególnie tych związanych z płatnością online.
 
-W pierwszym etapie zidentyfikowano aktorów i przypadki użycia. Określono, że z systemu korzystają między innymi pacjent, administrator, personel medyczny, zewnętrzna bramka płatności oraz system powiadomień. Następnie opisano główny proces rezerwacji wizyty: od wyszukania lekarza, przez wybór dostępnego terminu, po ewentualną płatność i potwierdzenie wizyty.
+W pierwszym etapie zidentyfikowano aktorów i przypadki użycia. Określono, że z systemu korzystają między innymi pacjent, administrator, personel medyczny, zewnętrzna bramka płatności oraz system powiadomień. Następnie opisano główny proces rezerwacji wizyty: od wyszukania lekarza, przez wybór dostępnego terminu, utworzenie tymczasowej rezerwacji, płatność online, aż po potwierdzenie wizyty.
 
-Szczególną uwagę poświęcono scenariuszom alternatywnym, takim jak brak dostępnych terminów, wymagana przedpłata, brak konieczności przedpłaty, płatność zaakceptowana, płatność odrzucona oraz anulowanie wizyty. Następnie doprecyzowano odpowiedzialności poszczególnych elementów systemu, czyli obsługę rezerwacji, harmonogramów, płatności, powiadomień i danych pacjentów.
+Szczególną uwagę poświęcono scenariuszom alternatywnym, takim jak brak dostępnych terminów, płatność zaakceptowana, płatność odrzucona, porzucenie procesu płatności oraz anulowanie wizyty. Następnie doprecyzowano odpowiedzialności poszczególnych elementów systemu, czyli obsługę rezerwacji, harmonogramów, płatności, powiadomień i danych pacjentów.
 
 Na końcu uzgodniono wspólny słownik pojęć domenowych. Do najważniejszych pojęć zaliczono pacjenta, lekarza, wizytę, termin dostępności, płatność oraz powiadomienie. Dzięki temu możliwe było dobranie odpowiednich diagramów UML do poszczególnych aspektów systemu.
 
 ### 1. Diagram przypadków użycia — zakres funkcjonalny systemu
 
-Jako pierwszy został przygotowany diagram przypadków użycia, ponieważ najlepiej pokazuje system z perspektywy użytkowników i interesariuszy. Diagram ten odpowiada na pytania: kto korzysta z systemu, jakie funkcje są dostępne, jakie są relacje między przypadkami użycia oraz które funkcje są obowiązkowe, a które opcjonalne.
+Jako pierwszy został przygotowany diagram przypadków użycia, ponieważ najlepiej pokazuje system z perspektywy użytkowników i interesariuszy. Diagram ten odpowiada na pytania: kto korzysta z systemu, jakie funkcje są dostępne oraz jakie są relacje między przypadkami użycia.
 
-W projekcie MediVisit diagram przypadków użycia pozwolił wskazać głównych aktorów: pacjenta, administratora, personel medyczny, bramkę płatności oraz system powiadomień. Głównym przypadkiem użycia jest rezerwacja wizyty. Płatność online nie zawsze jest obowiązkowa, dlatego została zamodelowana jako rozszerzenie przypadku użycia rezerwacji wizyty za pomocą relacji `<<extend>>` z warunkiem przedpłaty.
+W projekcie MediVisit diagram przypadków użycia pozwolił wskazać głównych aktorów: pacjenta, administratora, personel medyczny, bramkę płatności oraz system powiadomień. Głównym przypadkiem użycia jest rezerwacja wizyty. Płatność online jest obowiązkowym elementem procesu rezerwacji, dlatego została zamodelowana jako przypadek użycia uwzględniany przez rezerwację wizyty za pomocą relacji `<<include>>`.
 
 Diagram przypadków użycia był potrzebny, ponieważ określa zakres systemu i stanowi punkt wyjścia dla pozostałych diagramów.
 
@@ -94,7 +94,7 @@ Diagram przypadków użycia był potrzebny, ponieważ określa zakres systemu i 
 
 Po określeniu przypadków użycia przygotowano diagram aktywności, aby pokazać przepływ procesu rezerwacji wizyty krok po kroku. Diagram ten pokazuje kolejne działania wykonywane przez pacjenta i system, miejsca podejmowania decyzji oraz możliwe ścieżki alternatywne.
 
-Diagram aktywności porządkuje logikę procesu: wyszukanie lekarza, wybór dostępnego terminu, sprawdzenie dostępności, tymczasową blokadę terminu, decyzję o wymaganej przedpłacie, obsługę płatności, utworzenie wizyty oraz wysłanie potwierdzenia. Dzięki temu można było jasno przedstawić zarówno ścieżkę sukcesu, jak i sytuacje wyjątkowe, na przykład brak dostępności terminu lub odrzucenie płatności.
+Diagram aktywności porządkuje logikę procesu: wyszukanie lekarza, wybór dostępnego terminu, sprawdzenie dostępności, tymczasową blokadę terminu, wprowadzenie danych pacjenta lub logowanie, zainicjowanie płatności, autoryzację płatności, utworzenie wizyty oraz wysłanie potwierdzenia. Dzięki temu można było jasno przedstawić zarówno ścieżkę sukcesu, jak i sytuacje wyjątkowe, na przykład brak dostępności terminu lub odrzucenie płatności.
 
 ### 3. Diagram sekwencji — komunikacja między uczestnikami procesu
 
@@ -190,24 +190,15 @@ Diagramy są przygotowane w dwóch formatach:
 
 ### Project purpose
 
-**MediVisit** is a sample online medical appointment booking system. It allows patients to book appointments online and supports a healthcare provider in managing doctor availability, appointments, payments and notifications.
+**MediVisit** is a sample online medical appointment booking system. It allows patients to book appointments online and supports a healthcare provider in managing doctor availability, appointments, mandatory online payments and notifications.
 
 The project demonstrates the work of a Business Analyst / IT Business Analyst: process identification, actors, use cases, system interactions, domain model, object lifecycle and logical solution components.
 
 ### Business problem
 
-The healthcare provider handles a large part of appointment booking through phone calls, e-mail and reception desk operations. This causes availability errors, delayed confirmations, limited change history and difficulty handling prepayments for selected services.
+The healthcare provider handles a large part of appointment booking through phone calls, e-mail and reception desk operations. This causes availability errors, delayed confirmations, limited change history and difficulty handling online prepayments.
 
-The target solution digitizes the appointment booking process, reduces manual work and provides the patient with a clear flow for selecting a slot, completing payment and receiving confirmation.
-
-### Scope of analysis
-
-**In scope:**
-
-- searching for a doctor and available appointment slot,
-- booking, changing and cancelling appointments,
-- temporary slot reservation,
-- online payment handling for appointments requiring prepayment,
+The target solution digitizes the appointment booking process, reduces manual work and provides the patient with a clear flow for selecting a slot, completing online payment and receiving appointment confirmationy online payment handling before appointment confirmation,
 - confirmation and reminder notifications,
 - basic management of doctor schedules and users.
 
@@ -221,10 +212,10 @@ The target solution digitizes the appointment booking process, reduces manual wo
 
 ### Key business rules
 
-- An appointment can be confirmed only after successful payment if prepayment is required.
+- Each booking requires online prepayment before appointment confirmation.
+- An appointment can be confirmed only after successful online payment.
 - If payment is declined or times out, the temporarily held slot is released.
-- If prepayment is not required, the appointment can be confirmed immediately after booking.
-- A patient receives an appointment confirmation after successful booking.
+- A patient receives an appointment confirmation after successful booking and payment.
 - A cancelled appointment may trigger a cancellation notification.
 - A doctor can have multiple availability slots.
 - One availability slot can be reserved by at most one appointment.
@@ -232,7 +223,7 @@ The target solution digitizes the appointment booking process, reduces manual wo
 ### Assumptions
 
 - The system supports both patients and reception staff.
-- Online payment is optional and depends on whether prepayment is required for a given appointment.
+- Online payment is a mandatory step in the appointment booking process.
 - Payment processing is handled by an external payment gateway.
 - Notifications are delivered through an external e-mail/SMS service.
 - Appointment slots are temporarily held during the payment process.
@@ -240,9 +231,9 @@ The target solution digitizes the appointment booking process, reduces manual wo
 
 ### UML diagram selection rationale
 
-At the beginning of the MediVisit project, the main need was to describe the process of booking a medical appointment with optional online payment. The scope of the system was not limited only to selecting an appointment slot. It also included searching for a doctor, checking slot availability, creating a booking, handling payment, confirming the appointment, sending notifications and handling exceptional cases such as declined payment, cancellation or unavailable slots.
+At the beginning of the MediVisit project, the main need was to describe the process of booking a medical appointment with mandatory online payment. The scope of the system was not limited only to selecting an appointment slot. It also included searching for a doctor, checking slot availability, creating a booking, handling payment, confirming the appointment, sending notifications and handling exceptional cases such as declined payment, cancellation or unavailable slots.
 
-The main user needs were identified first. The patient should be able to search for a doctor, check available slots and book an appointment. In some cases, the patient may be required to make an online prepayment. The system should confirm the appointment after successful payment, release the slot if payment fails and send an e-mail or SMS notification to the patient. Additionally, the administrator and medical staff should be able to manage users and doctor schedules.
+The main user needs were identified first. The patient should be able to search for a doctor, check available slots, book an appointment and complete online prepayment. The system should confirm the appointment after successful payment, release the slot if payment fails and send an e-mail or SMS notification to the patient. Additionally, the administrator and medical staff should be able to manage users and doctor schedules.
 
 Based on this, it was clear that a single diagram would not be enough to describe the system properly. Each UML diagram presents the system from a different perspective. Therefore, a set of diagrams was selected to describe functional requirements, business process flow, communication between participants, data structure, appointment lifecycle and logical architecture.
 
@@ -250,17 +241,17 @@ Based on this, it was clear that a single diagram would not be enough to describ
 
 The analysis was carried out step by step. First, the focus was on understanding who uses the system and what goals each user wants to achieve. Then, the main business process — appointment booking — was analysed. The next step was to refine alternative scenarios, especially those related to online payment.
 
-In the first stage, actors and use cases were identified. The system users and external participants include the patient, administrator, medical staff, external payment gateway and notification system. Then, the main appointment booking process was described: from searching for a doctor, through selecting an available slot, to optional payment and appointment confirmation.
+In the first stage, actors and use cases were identified. The system users and external participants include the patient, administrator, medical staff, external payment gateway and notification system. Then, the main appointment booking process was described: from searching for a doctor, through selecting an available slot, creating a temporary booking, online payment, and appointment confirmation.
 
-Special attention was given to alternative scenarios, such as unavailable slots, required prepayment, no prepayment required, payment accepted, payment declined and appointment cancellation. Then, the responsibilities of system elements were clarified, including booking, scheduling, payments, notifications and patient data handling.
+Special attention was given to alternative scenarios, such as unavailable slots, payment accepted, payment declined, abandoned payment and appointment cancellation. Then, the responsibilities of system elements were clarified, including booking, scheduling, payments, notifications and patient data handling.
 
 Finally, a common domain vocabulary was defined. The key domain concepts included patient, doctor, appointment, availability slot, payment and notification. This made it possible to select the appropriate UML diagrams for different aspects of the system.
 
 ### 1. Use Case Diagram — functional scope
 
-The use case diagram was prepared first because it best shows the system from the perspective of users and stakeholders. It answers questions such as who uses the system, what functions are available, what relationships exist between use cases and which functions are mandatory or optional.
+The use case diagram was prepared first because it best shows the system from the perspective of users and stakeholders. It answers questions such as who uses the system, what functions are available and what relationships exist between use cases.
 
-In MediVisit, the use case diagram identifies the main actors: patient, administrator, medical staff, payment gateway and notification system. The main use case is booking an appointment. Online payment is not always mandatory, so it was modelled as an extension of appointment booking using the `<<extend>>` relationship with a prepayment condition.
+In MediVisit, the use case diagram identifies the main actors: patient, administrator, medical staff, payment gateway and notification system. The main use case is booking an appointment. Online payment is a mandatory part of the booking process, so it was modelled as an included use case using the `<<include>>` relationship.
 
 The use case diagram was needed because it defines the system scope and serves as the starting point for the remaining diagrams.
 
@@ -268,7 +259,7 @@ The use case diagram was needed because it defines the system scope and serves a
 
 After defining the use cases, the activity diagram was prepared to show the appointment booking process step by step. It presents the actions performed by the patient and the system, decision points and possible alternative paths.
 
-The activity diagram organises the process logic: searching for a doctor, selecting an available slot, checking availability, temporarily holding the slot, deciding whether prepayment is required, handling payment, creating the appointment and sending confirmation. This makes it possible to clearly show both the success path and exception paths, such as unavailable slots or declined payment.
+The activity diagram organises the process logic: searching for a doctor, selecting an available slot, checking availability, temporarily holding the slot, entering patient details or logging in, initiating payment, authorizing payment, creating the appointment and sending confirmation. This makes it possible to clearly show both the success path and exception paths, such as unavailable slots or declined payment.
 
 ### 3. Sequence Diagram — communication between process participants
 
@@ -347,16 +338,16 @@ The diagrams are prepared in two formats:
 
 | Diagram | PNG preview | draw.io file |
 |---|---|---|
-| Use case diagram | [PNG](diagrams/png/en/01_use_case_diagram.png) | [draw.io](diagrams/drawio/en/01_use_case_diagram.drawio.zip) |
-| Activity diagram | [PNG](diagrams/png/en/02_activity_diagram.png) | [draw.io](diagrams/drawio/en/02_activity_diagram.drawio.zip) |
-| Sequence diagram | [PNG](diagrams/png/en/03_sequence_diagram.png) | [draw.io](diagrams/drawio/en/03_sequence_diagram.drawio.zip) |
-| Class diagram | [PNG](diagrams/png/en/04_class_diagram.png) | [draw.io](diagrams/drawio/en/04_class_diagram.drawio.zip) |
-| State machine diagram | [PNG](diagrams/png/en/05_state_machine_diagram.png) | [draw.io](diagrams/drawio/en/05_state_machine_diagram.drawio.zip) |
-| Component diagram | [PNG](diagrams/png/en/06_component_diagram.png) | [draw.io](diagrams/drawio/en/06_component_diagram.drawio.zip) |
+| Use case diagram | diagrams/png/en/01_use_case_diagram.png | diagrams/drawio/en/01_use_case_diagram.drawio.zip |
+| Activity diagram | diagrams/png/en/02_activity_diagram.png | diagrams/drawio/en/02_activity_diagram.drawio.zip |
+| Sequence diagram | diagrams/png/en/03_sequence_diagram.png | diagrams/drawio/en/03_sequence_diagram.drawio.zip |
+| Class diagram | diagrams/png/en/04_class_diagram.png | diagrams/drawio/en/04_class_diagram.drawio.zip |
+| State machine diagram | diagrams/png/en/05_state_machine_diagram.png | diagrams/drawio/en/05_state_machine_diagram.drawio.zip |
+| Component diagram | diagrams/png/en/06_component_diagram.png | diagrams/drawio/en/06_component_diagram.drawio.zip |
 
 #### Preview — activity diagram
 
-![Activity diagram](diagrams/png/en/02_activity_diagram.png)
+diagrams/png/en/02_activity_diagram.png
 
 ---
 
@@ -365,27 +356,19 @@ The diagrams are prepared in two formats:
 ```text
 clinic-appointment-system-uml-ba-case/
 ├── README.md
-└── diagrams/
-    ├── png/
-    │   ├── pl/
-    │   └── en/
-    └── drawio/
-        ├── pl/
-        └── en/
-```
-
-## Skills demonstrated
-
-- Business Analysis,
-- IT Business Analysis,
-- UML modelling,
-- use case modelling,
-- process modelling,
-- sequence modelling,
-- domain modelling,
-- state modelling,
-- component modelling,
-- business rules definition,
-- requirements structuring,
-- logical architecture modelling,
-- bilingual PL/EN documentation.
+├── backlog/
+│   ├── pl/
+│   │   └── user_stories.md
+│   └── en/
+│       └── user_stories.md
+├── diagrams/
+│   ├── README.md
+│   ├── png/
+│   │   ├── pl/
+│   │   └── en/
+│   └── drawio/
+│       ├── pl/
+│       └── en/
+└── docs/
+    ├── pl/
+    └── en/
